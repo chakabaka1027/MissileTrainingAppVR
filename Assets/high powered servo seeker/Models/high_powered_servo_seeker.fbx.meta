@@ -1,0 +1,205 @@
+fileFormatVersion: 2
+guid: f59df63d63907fb49a63eb4bc7bf7ee5
+timeCreated: 1515512283
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: antenna_plate
+    100002: antenna_plate1
+    100004: base
+    100006: bolt
+    100008: bolt1
+    100010: bolt2
+    100012: bolt3
+    100014: bolts
+    100016: counter_weight_mount
+    100018: //RootNode
+    100020: hinge
+    100022: hinge_component
+    100024: hinge_component1
+    100026: hinge_component2
+    100028: hinge_component3
+    100030: hinge_component4
+    100032: hinge_component5
+    100034: hinge_component6
+    100036: hinge_mount
+    100038: motion_sensing_rate_gyro
+    100040: motion_sensing_rate_gyro_counterweight1
+    100042: motion_sensing_rate_gyro_mount
+    100044: mounts
+    100046: RF_Processor
+    100048: slotted_planar_array_antenna
+    100050: transmitter_output_feed
+    400000: antenna_plate
+    400002: antenna_plate1
+    400004: base
+    400006: bolt
+    400008: bolt1
+    400010: bolt2
+    400012: bolt3
+    400014: bolts
+    400016: counter_weight_mount
+    400018: //RootNode
+    400020: hinge
+    400022: hinge_component
+    400024: hinge_component1
+    400026: hinge_component2
+    400028: hinge_component3
+    400030: hinge_component4
+    400032: hinge_component5
+    400034: hinge_component6
+    400036: hinge_mount
+    400038: motion_sensing_rate_gyro
+    400040: motion_sensing_rate_gyro_counterweight1
+    400042: motion_sensing_rate_gyro_mount
+    400044: mounts
+    400046: RF_Processor
+    400048: slotted_planar_array_antenna
+    400050: transmitter_output_feed
+    2300000: antenna_plate
+    2300002: antenna_plate1
+    2300004: base
+    2300006: bolt
+    2300008: bolt1
+    2300010: bolt2
+    2300012: bolt3
+    2300014: counter_weight_mount
+    2300016: hinge_component
+    2300018: hinge_component1
+    2300020: hinge_component2
+    2300022: hinge_component3
+    2300024: hinge_component4
+    2300026: hinge_component5
+    2300028: hinge_component6
+    2300030: hinge_mount
+    2300032: motion_sensing_rate_gyro
+    2300034: motion_sensing_rate_gyro_counterweight1
+    2300036: motion_sensing_rate_gyro_mount
+    2300038: RF_Processor
+    2300040: transmitter_output_feed
+    3300000: antenna_plate
+    3300002: antenna_plate1
+    3300004: base
+    3300006: bolt
+    3300008: bolt1
+    3300010: bolt2
+    3300012: bolt3
+    3300014: counter_weight_mount
+    3300016: hinge_component
+    3300018: hinge_component1
+    3300020: hinge_component2
+    3300022: hinge_component3
+    3300024: hinge_component4
+    3300026: hinge_component5
+    3300028: hinge_component6
+    3300030: hinge_mount
+    3300032: motion_sensing_rate_gyro
+    3300034: motion_sensing_rate_gyro_counterweight1
+    3300036: motion_sensing_rate_gyro_mount
+    3300038: RF_Processor
+    3300040: transmitter_output_feed
+    4300000: hinge_component2
+    4300002: hinge_component6
+    4300004: hinge_component1
+    4300006: hinge_component4
+    4300008: hinge_component5
+    4300010: hinge_component3
+    4300012: hinge_mount
+    4300014: hinge_component
+    4300016: bolt
+    4300018: bolt1
+    4300020: bolt2
+    4300022: bolt3
+    4300024: counter_weight_mount
+    4300026: motion_sensing_rate_gyro_mount
+    4300028: RF_Processor
+    4300030: antenna_plate
+    4300032: antenna_plate1
+    4300034: transmitter_output_feed
+    4300036: motion_sensing_rate_gyro_counterweight1
+    4300038: motion_sensing_rate_gyro
+    4300040: base
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 5cf97bda7bdb642488b52c6eb8c8d363, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

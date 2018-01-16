@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Networking;
 
-
-public class MissileManager : NetworkBehaviour {
+public class MissileManagerSolo : MonoBehaviour {
 
     string animationName;
     string stage = "Close";
@@ -20,26 +18,7 @@ public class MissileManager : NetworkBehaviour {
     int currentSubassemblyIndex;
     int reference;
 
-
-    [Command]
-    void CmdReturnButton(){
-        RpcReturnButton();
-    }
-
-    [ClientRpc]
-    public void RpcReturnButton(){
-        Return();
-    }
-
     public void ReturnButton(){
-        if(!Network.isServer){
-            CmdReturnButton();
-        } else {
-            RpcReturnButton();
-        }
-    }
-
-    void Return(){
         string animationName = "";
         string[] gutParse = stage.Split('_');
 
@@ -56,23 +35,17 @@ public class MissileManager : NetworkBehaviour {
         stage = "Open";
     }
 
-    [Command]
-    void CmdPlayAnimation(string animationName){
-        RpcPlayAnimation(animationName);
-    }
-
-    [ClientRpc]
-    public void RpcPlayAnimation(string animationName){
+    public void PlayAnimation(string animationName){
         GameObject.Find("Missile").GetComponent<Animator>().Play(animationName);
         stage = animationName;
         string[] gutParse = stage.Split('_');
 
         if(gutParse.Length == 2){
-            RpcUpdateInfoPanel(int.Parse(gutParse[1]) - 1, 0);
+            UpdateInfoPanel(int.Parse(gutParse[1]) - 1, 0);
         }
 
         if(gutParse.Length > 2 && int.TryParse(gutParse[2], out reference)){
-            RpcUpdateInfoPanel(int.Parse(gutParse[1]) - 1, int.Parse(gutParse[2]) - 1);
+            UpdateInfoPanel(int.Parse(gutParse[1]) - 1, int.Parse(gutParse[2]) - 1);
         }
 
         if(stage == "Guts_1_Close"){
@@ -80,21 +53,7 @@ public class MissileManager : NetworkBehaviour {
         }
     }
 
-    public void PlayAnimation(string animationName){
-        if(!Network.isServer){
-            CmdPlayAnimation(animationName);
-        } else {
-            RpcPlayAnimation(animationName);
-        }
-    }
-
-    [Command]
-    void CmdUpdateInfoPanel(int componentKey, int subassemblyKey){
-        RpcUpdateInfoPanel(componentKey, subassemblyKey);
-    }
-
-    [ClientRpc]
-    public void RpcUpdateInfoPanel(int assemblyKey, int subassemblyKey){
+    public void UpdateInfoPanel(int assemblyKey, int subassemblyKey){
         panelContentsIndex = 0;
         currentAssemblyIndex = assemblyKey;
         currentSubassemblyIndex = subassemblyKey;
@@ -107,21 +66,7 @@ public class MissileManager : NetworkBehaviour {
         }
     }
 
-    public void UpdateInfoPanel(int componentKey, int subassemblyKey){
-        if(!Network.isServer){
-            CmdUpdateInfoPanel(componentKey, subassemblyKey);
-        } else {
-            RpcUpdateInfoPanel(componentKey, subassemblyKey);
-        }
-    }
-
-    [Command]
-    void CmdChangePanelPage(bool forward){
-        RpcChangePanelPage(forward);
-    }
-
-    [ClientRpc]
-    public void RpcChangePanelPage(bool forward){
+    public void ChangePanelPage(bool forward){
         if(forward){
             //only increase index if there is more than 1 element in contents array
             if(stage.Split('_').Length > 2 && components[currentAssemblyIndex].subassemblies[currentSubassemblyIndex].contents.Length > 1 || stage.Split('_').Length <= 2 && components[currentAssemblyIndex].contents.Length > 1){
@@ -152,14 +97,6 @@ public class MissileManager : NetworkBehaviour {
             } else {
                 infoPanel.transform.Find("Contents").GetComponent<Text>().text = components[currentAssemblyIndex].contents[panelContentsIndex];
             }
-        }
-    }
-
-    public void ChangePanelPage(bool forward){
-        if(!Network.isServer){
-            CmdChangePanelPage(forward);
-        } else {
-            RpcChangePanelPage(forward);
         }
     }
 

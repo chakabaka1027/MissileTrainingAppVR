@@ -30,7 +30,6 @@ public class QuizManager : MonoBehaviour {
     GameObject checkAllThatApplyResponses;
     GameObject currentResponseObject;
     GameObject submitResponseButton;
-    GameObject menuButton;
 
     Question currentQuestion;
 
@@ -45,7 +44,6 @@ public class QuizManager : MonoBehaviour {
         checkAllThatApplyResponses = GameObject.Find("Check All That Apply Responses");
         questionText = GameObject.Find("Question").GetComponent<Text>();
         submitResponseButton = GameObject.Find("SubmitButton");
-        menuButton = GameObject.Find("MenuButton");
         passFailText = GameObject.Find("Pass/Fail Text").GetComponent<Text>();
         resultsText = GameObject.Find("Results Text").GetComponent<Text>();
         attemptsText = GameObject.Find("Attempts Text").GetComponent<Text>();
@@ -53,7 +51,6 @@ public class QuizManager : MonoBehaviour {
         passFailText.gameObject.SetActive(false);
         resultsText.gameObject.SetActive(false);
         attemptsText.gameObject.SetActive(false);
-        menuButton.gameObject.SetActive(false);
 
         totalQuestions = questions.Length;
 		GenerateQuestion();
@@ -127,7 +124,6 @@ public class QuizManager : MonoBehaviour {
         questionText.gameObject.SetActive(false);
         currentResponseObject.SetActive(false);
         submitResponseButton.SetActive(false);
-        menuButton.SetActive(true);
 
         passFailText.gameObject.SetActive(true);
         resultsText.gameObject.SetActive(true);
