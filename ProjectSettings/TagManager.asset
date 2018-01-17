@@ -9,6 +9,9 @@ TagManager:
   - guts2
   - guts3
   - guts4
+  - guts1_1
+  - guts1_2
+  - guts1_3
   layers:
   - Default
   - TransparentFX
