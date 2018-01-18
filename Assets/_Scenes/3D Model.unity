@@ -11217,6 +11217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e4ff4ade3e1964387ada2ff58a408f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftController: {fileID: 991650218}
+  rightController: {fileID: 991650216}
 --- !u!224 &829125674
 RectTransform:
   m_ObjectHideFlags: 0
